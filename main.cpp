@@ -1,5 +1,9 @@
 #include <SFML/Graphics.hpp>
 
+#include "Math.h"
+
+using namespace sf;
+
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
@@ -18,7 +22,7 @@ int main()
         window.clear();
         window.draw(shape);
         window.display();
-    }
+    }*/
 
     return 0;
 }
