@@ -139,9 +139,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Math.cpp" />
+    <ClCompile Include="NPC\Man\Man.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math.h" />
+    <ClInclude Include="NPC\Man\Man.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,14 +1,21 @@
 #include <SFML/Graphics.hpp>
-
+#include <iostream>
 #include "Math.h"
+#include "NPC/Man/Man.h"
 
 using namespace sf;
+using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    Math math;
+
+    std::string path = "./NPC/Miner/minerAnim-Sheet.png";
+    Texture t;
+    t.loadFromFile(path);
+    Man man(t, 32, 48);
+
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Game");
 
     while (window.isOpen())
     {
@@ -20,9 +27,9 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        man.drawOn(window);
         window.display();
-    }*/
+    }
 
     return 0;
 }
