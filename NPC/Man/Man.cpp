@@ -1,16 +1,16 @@
 #include "Man.h"
 
-Vector2f Man::getPosition() const
+Vector2f Man::getPosition()
 {
-	return position;
+	return sprite.getPosition();
 }
 
-void Man::setPositiion(Vector2f V)
+void Man::setPosition(Vector2f V)
 {
-	position = V;
+	sprite.setPosition(V);
 }
 
-Man::MovingStates Man::getState() const
+MovingStates Man::getState() const
 {
 	return state;
 }
@@ -23,4 +23,9 @@ void Man::setState(MovingStates state)
 void Man::drawOn(RenderWindow& w)
 {
 	w.draw(sprite);
+}
+
+void Man::setFrame(Vector2i& pos)
+{
+	sprite.setTextureRect(IntRect(width * pos.x, height * pos.y, width, height));
 }
